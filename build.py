@@ -80,7 +80,19 @@ for word, title, desc, hindi, category, src, fname in SPECS:
                     "hindi": hindi, "category": category,
                     "status": "ready", "file": f"resources/{fname}", "body": body})
 
-manifest = [{k: v for k, v in e.items() if k != "body"} for e in entries]
+examples_data = {}
+if (OUT / "examples.json").exists():
+    examples_data = json.loads((OUT / "examples.json").read_text(encoding="utf-8"))
+keywords_data = {}
+if (OUT / "keywords.json").exists():
+    keywords_data = json.loads((OUT / "keywords.json").read_text(encoding="utf-8"))
+for e in entries:
+    e["keywords"] = keywords_data.get("per_resource", {}).get(e["word"], [])
+    e["examples"] = examples_data.get(e["word"], [])
+site_topics = keywords_data.get("site_topics", [])
+meta_kw = ", ".join(site_topics + [k for v in keywords_data.get("per_resource", {}).values() for k in v])
+
+manifest = [{k: v for k, v in e.items() if k not in ("body", "keywords", "examples")} for e in entries]
 (OUT / "resources.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 data_json = json.dumps(entries, ensure_ascii=False)
@@ -92,6 +104,7 @@ html = f"""<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Reel CTA Link Hub | Cosmox Origin</title>
 <meta name="description" content="One link for every Cosmox Origin reel comment CTA. Search the word from the reel and get the resource instantly, no DM wait.">
+<meta name="keywords" content="{meta_kw}">
 <style>
 * {{ box-sizing: border-box; }}
 body {{ margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background: #f4efe4; color: #111; }}
@@ -164,7 +177,7 @@ a {{ color: #ff7a1a; }}
 <p>Rule: koi resource ready nahi hai to uska status <code>coming-soon</code> rakho. Jhootha link kabhi mat do.</p>
 </section>
 </main>
-<footer>Built by Cosmox Origin &middot; Follow @cosmox_origin for AI workflows that actually work.<br><a href="INSTALL.md">Installation and usage guide</a> &middot; <a href="README.md">All resources</a></footer>
+<footer>Built by Cosmox Origin &middot; Follow @cosmox_origin for AI workflows that actually work.<br>Follow Cosmox Origin: <a href="https://www.instagram.com/cosmox_origin">Instagram</a> &middot; <a href="https://www.facebook.com/profile.php?id=324872101219371">Facebook</a> &middot; <a href="https://cosmoxorigin.com">Website</a> &middot; <a href="https://github.com/CosmoX-Origin">GitHub</a><br><a href="INSTALL.md">Installation and usage guide</a> &middot; <a href="README.md">All resources</a></footer>
 <script>
 const RESOURCES = {data_json};
 const esc = s => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -172,19 +185,25 @@ let currentCat = "All";
 function sectionsHtml(body) {{
   return body.split(/\\n\\s*\\n/).filter(s => s.trim()).map(s => `<div class="sec"><button class="btn-line" onclick="copySection(this)">Copy section</button><pre>${{esc(s.trim())}}</pre></div>`).join("");
 }}
+function examplesHtml(exs) {{
+  return (exs || []).map(x => `<div class="sec"><button class="btn-line" onclick="copyExample(this)">Copy example</button><strong>${{esc(x.title)}}</strong><pre>${{esc(x.text)}}</pre></div>`).join("");
+}}
+const TOTAL_EX = RESOURCES.reduce((a, r) => a + (r.examples || []).length, 0);
 function render(filter) {{
   const q = (filter || "").trim().toLowerCase();
-  const list = RESOURCES.filter(r => (currentCat === "All" || r.category === currentCat) && (!q || r.word.toLowerCase().includes(q) || r.title.toLowerCase().includes(q) || r.description.toLowerCase().includes(q) || (r.hindi || "").includes(q)));
-  document.getElementById("count").textContent = list.length + " of " + RESOURCES.length + " resources shown";
+  const list = RESOURCES.filter(r => (currentCat === "All" || r.category === currentCat) && (!q || r.word.toLowerCase().includes(q) || r.title.toLowerCase().includes(q) || r.description.toLowerCase().includes(q) || (r.hindi || "").includes(q) || (r.keywords || []).join(" ").toLowerCase().includes(q) || (r.examples || []).some(x => (x.title + " " + x.text).toLowerCase().includes(q))));
+  document.getElementById("count").textContent = list.length + " of " + RESOURCES.length + " resources shown · " + TOTAL_EX + " examples";
   document.getElementById("cards").innerHTML = list.map((r, i) => {{
     const idx = RESOURCES.indexOf(r);
     if (r.status !== "ready") {{
       return `<article class="card"><span class="badge soon">COMING SOON</span><span class="word">${{esc(r.word)}}</span><span class="cat">${{esc(r.category || "")}}</span><h2>${{esc(r.title)}}</h2><p>${{esc(r.description)}}</p></article>`;
     }}
-    return `<article class="card"><span class="badge ready">READY</span><span class="word">${{esc(r.word)}}</span><span class="cat">${{esc(r.category || "")}}</span><h2>${{esc(r.title)}}</h2><p>${{esc(r.description)}}</p><p class="hindi">Hindi me: ${{esc(r.hindi || "")}}</p><button class="btn-dark" onclick="toggle(${{idx}})">View resource</button><button class="btn-line" onclick="copyRes(${{idx}}, this)">Copy text</button><button class="btn-line" onclick="shareRes(${{idx}}, this)">Share</button> <a href="${{esc(r.file)}}">Open file</a><div class="sections" id="sec-${{idx}}">${{sectionsHtml(r.body)}}</div></article>`;
+    return `<article class="card"><span class="badge ready">READY</span><span class="word">${{esc(r.word)}}</span><span class="cat">${{esc(r.category || "")}}</span><h2>${{esc(r.title)}}</h2><p>${{esc(r.description)}}</p><p class="hindi">Hindi me: ${{esc(r.hindi || "")}}</p><p class="hindi">Keywords: ${{esc((r.keywords || []).join(", "))}}</p><button class="btn-dark" onclick="toggle(${{idx}})">View resource</button><button class="btn-line" onclick="copyRes(${{idx}}, this)">Copy text</button><button class="btn-line" onclick="shareRes(${{idx}}, this)">Share</button><button class="btn-line" onclick="toggleEx(${{idx}})">Examples (${{(r.examples || []).length}})</button> <a href="${{esc(r.file)}}">Open file</a><div class="sections" id="sec-${{idx}}">${{sectionsHtml(r.body)}}</div><div class="sections" id="ex-${{idx}}">${{examplesHtml(r.examples)}}</div></article>`;
   }}).join("") || "<p>No match. Try MOTION, COACH, AUDIT, CLAUDE, LEADS, SOLO, TEAM, SYSTEM, NUMBER or ENGINE.</p>";
 }}
 function toggle(i) {{ document.getElementById("sec-" + i).classList.toggle("open"); }}
+function toggleEx(i) {{ document.getElementById("ex-" + i).classList.toggle("open"); }}
+function copyExample(btn) {{ copyText(btn.parentElement.querySelector("pre").textContent, btn, "Copy example"); }}
 async function copyText(text, btn, label) {{
   try {{ await navigator.clipboard.writeText(text); btn.textContent = "Copied"; }}
   catch (e) {{
