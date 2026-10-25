@@ -28,7 +28,7 @@ def claude_guide():
 
 SPECS = [
     ("MOTION", "Claude Motion Graphics: 10-Step Setup",
-     "Claude se broadcast-style motion graphics banane ka poora setup, plus ek working 9:16 starter template.",
+     "Claude se broadcast-style motion graphics banane ka poora setup, plus ek working 9:16 starter template (resources/motion-template.html).",
      MOTION_SRC, "MOTION.md"),
     ("COACH", "Your Own AI Coach",
      "Claude Projects me apna personal AI coach banane ka 5-step setup.",
