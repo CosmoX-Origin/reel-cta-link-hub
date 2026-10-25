@@ -1,0 +1,58 @@
+[
+  {
+    "word": "MOTION",
+    "title": "Claude Motion Graphics: 10-Step Setup",
+    "description": "Claude se broadcast-style motion graphics banane ka poora setup, plus ek working 9:16 starter template.",
+    "status": "ready",
+    "file": "resources/MOTION.md"
+  },
+  {
+    "word": "COACH",
+    "title": "Your Own AI Coach",
+    "description": "Claude Projects me apna personal AI coach banane ka 5-step setup.",
+    "status": "ready",
+    "file": "resources/COACH.md"
+  },
+  {
+    "word": "AUDIT",
+    "title": "The Business Audit Prompt",
+    "description": "Business ko 6 areas me audit karne wala ruthless prompt, money leaks ke saath aur 30-day fix plan.",
+    "status": "ready",
+    "file": "resources/AUDIT.md"
+  },
+  {
+    "word": "CLAUDE",
+    "title": "Claude Starter Guide: 60-Minute AI Employee",
+    "description": "Claude ko sirf 60 minute me apna AI employee banane ka starter guide.",
+    "status": "ready",
+    "file": "resources/CLAUDE.md"
+  },
+  {
+    "word": "LEADS",
+    "title": "AI Closer Setup Checklist",
+    "description": "Leads ko inbox me marne se rokne ka checklist: 60-second reply, Day 1-3-7 follow-up, zero-slip CRM.",
+    "status": "ready",
+    "file": "resources/LEADS.md"
+  },
+  {
+    "word": "SOLO",
+    "title": "Run a 1-Person Company with AI",
+    "description": "Bina team ke AI employees ke saath 1-person company chalane ka poora guide.",
+    "status": "ready",
+    "file": "resources/SOLO.md"
+  },
+  {
+    "word": "TEAM",
+    "title": "Your 35 AI Team Add-ons",
+    "description": "Claude Code ke liye 35 add-ons, har ek ke install command ke saath.",
+    "status": "ready",
+    "file": "resources/TEAM.md"
+  },
+  {
+    "word": "NUMBER",
+    "title": "Coming soon",
+    "description": "Is word ka verified resource abhi hub me nahi hai, isliye yahan koi jhootha link nahi diya gaya hai.",
+    "status": "coming-soon",
+    "file": null
+  }
+]
