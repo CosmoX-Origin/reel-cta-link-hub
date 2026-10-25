@@ -35,9 +35,17 @@ Put this hub's link in the Instagram bio. Every reel then only needs to name its
 | LEADS | AI Closer Setup Checklist | Ready — `resources/LEADS.md` |
 | SOLO | Run a 1-Person Company with AI | Ready — `resources/SOLO.md` |
 | TEAM | Your 35 AI Team Add-ons | Ready — `resources/TEAM.md` |
-| NUMBER | — | Coming soon (no verified resource yet, so no fake link) |
+| SYSTEM | One-Person Company Checklist: 5 Principles | Ready — `resources/SYSTEM.md` |
+| NUMBER | Give Claude Its Own WhatsApp Number | Ready — `resources/NUMBER.md` |
+| ENGINE | Content Machine Setup Checklist | Ready — `resources/ENGINE.md` |
 
 `resources.json` is the machine-readable manifest of the same list, so other tools can read the hub without scraping the page.
+
+## What's new
+
+See [CHANGELOG.md](CHANGELOG.md). Latest: categories, Hindi summaries,
+dark mode, Share and Copy section buttons, SYSTEM / NUMBER / ENGINE
+resources, and a request-a-resource issue template.
 
 ## Contribute
 
