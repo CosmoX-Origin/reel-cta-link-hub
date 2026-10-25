@@ -13,6 +13,11 @@
 
 ## Use it
 
+**New here? Start with the [Installation and Usage Guide](INSTALL.md).**
+It explains, step by step, how to read a guide with no installation, how to
+download or clone the hub, how to use a guide inside Claude, and how to use
+the MOTION template.
+
 1. Open `index.html` (or the GitHub Pages site once enabled for this repo).
 2. Type the comment word from the reel, for example `MOTION`.
 3. Click **View resource** to read it, **Copy text** to copy it, or **Open file** for the plain Markdown version.

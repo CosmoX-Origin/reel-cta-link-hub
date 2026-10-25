@@ -128,7 +128,7 @@ a {{ color: #ff7a1a; }}
 <p>Rule: koi resource ready nahi hai to uska status <code>coming-soon</code> rakho. Jhootha link kabhi mat do.</p>
 </section>
 </main>
-<footer>Built by Cosmox Origin &middot; Follow @cosmox_origin for AI workflows that actually work.</footer>
+<footer>Built by Cosmox Origin &middot; Follow @cosmox_origin for AI workflows that actually work.<br><a href="INSTALL.md">Installation and usage guide</a> &middot; <a href="README.md">All resources</a></footer>
 <script>
 const RESOURCES = {data_json};
 const esc = s => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
