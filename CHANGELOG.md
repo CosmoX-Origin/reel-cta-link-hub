@@ -2,6 +2,20 @@
 
 All notable changes to this hub are listed here, newest first.
 
+## v1.5 — 2026-10-25 — English only, everywhere
+
+- Changed: the whole hub page is now English only. All Hinglish UI text
+  (header, card descriptions, creator section) was translated to English
+  and the Hindi summaries were removed. Resource guides were already in
+  English and are unchanged.
+
+## v1.4 — 2026-10-25 — 500 examples, keywords, social footer
+
+- Added: 500 examples (50 per resource), 250 keywords (25 per resource),
+  searchable on the hub page, plus meta keywords.
+- Added: social links in the footer (Instagram, Facebook, Website, GitHub).
+- Note: GitHub allows at most 20 repository topics, so 20 topics are live.
+
 ## v1.3 — 2026-10-25 — All discovered features
 
 - Added: SYSTEM (one-person company checklist), NUMBER (Claude WhatsApp

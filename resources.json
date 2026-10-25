@@ -2,8 +2,8 @@
   {
     "word": "MOTION",
     "title": "Claude Motion Graphics: 10-Step Setup",
-    "description": "Claude se broadcast-style motion graphics banane ka poora setup, plus ek working 9:16 starter template (resources/motion-template.html).",
-    "hindi": "क्लॉड से मोशन ग्राफिक्स बनाने का पूरा सेटअप और स्टार्टर टेम्पलेट",
+    "description": "Complete setup for creating broadcast-style motion graphics with Claude, plus a working 9:16 starter template (resources/motion-template.html).",
+    "hindi": "",
     "category": "AI Tools",
     "status": "ready",
     "file": "resources/MOTION.md"
@@ -11,8 +11,8 @@
   {
     "word": "COACH",
     "title": "Your Own AI Coach",
-    "description": "Claude Projects me apna personal AI coach banane ka 5-step setup.",
-    "hindi": "क्लॉड में अपना पर्सनल AI कोच बनाने का सेटअप",
+    "description": "5-step setup to build your own personal AI coach in Claude Projects.",
+    "hindi": "",
     "category": "AI Tools",
     "status": "ready",
     "file": "resources/COACH.md"
@@ -20,8 +20,8 @@
   {
     "word": "AUDIT",
     "title": "The Business Audit Prompt",
-    "description": "Business ko 6 areas me audit karne wala ruthless prompt, money leaks ke saath aur 30-day fix plan.",
-    "hindi": "अपने बिज़नेस का ऑडिट करने वाला प्रॉम्प्ट और 30 दिन का फिक्स प्लान",
+    "description": "A ruthless prompt that audits a business across 6 areas, finds money leaks, and gives a 30-day fix plan.",
+    "hindi": "",
     "category": "Business",
     "status": "ready",
     "file": "resources/AUDIT.md"
@@ -29,8 +29,8 @@
   {
     "word": "CLAUDE",
     "title": "Claude Starter Guide: 60-Minute AI Employee",
-    "description": "Claude ko sirf 60 minute me apna AI employee banane ka starter guide.",
-    "hindi": "60 मिनट में क्लॉड को अपना AI कर्मचारी बनाने की गाइड",
+    "description": "Starter guide to turn Claude into your AI employee in just 60 minutes.",
+    "hindi": "",
     "category": "AI Tools",
     "status": "ready",
     "file": "resources/CLAUDE.md"
@@ -38,8 +38,8 @@
   {
     "word": "LEADS",
     "title": "AI Closer Setup Checklist",
-    "description": "Leads ko inbox me marne se rokne ka checklist: 60-second reply, Day 1-3-7 follow-up, zero-slip CRM.",
-    "hindi": "लीड्स को खोने से रोकने वाला AI क्लोजर चेकलिस्ट",
+    "description": "Checklist to stop leads dying in the inbox: 60-second reply, Day 1-3-7 follow-up, zero-slip CRM.",
+    "hindi": "",
     "category": "Business",
     "status": "ready",
     "file": "resources/LEADS.md"
@@ -47,8 +47,8 @@
   {
     "word": "SOLO",
     "title": "Run a 1-Person Company with AI",
-    "description": "Bina team ke AI employees ke saath 1-person company chalane ka poora guide.",
-    "hindi": "बिना टीम के AI से एक व्यक्ति की कंपनी चलाने की गाइड",
+    "description": "Complete guide to running a 1-person company with AI employees, without a team.",
+    "hindi": "",
     "category": "Business",
     "status": "ready",
     "file": "resources/SOLO.md"
@@ -56,8 +56,8 @@
   {
     "word": "TEAM",
     "title": "Your 35 AI Team Add-ons",
-    "description": "Claude Code ke liye 35 add-ons, har ek ke install command ke saath.",
-    "hindi": "क्लॉड कोड के लिए 35 AI टीम ऐड-ऑन और इंस्टॉल कमांड",
+    "description": "35 add-ons for Claude Code, each with its install command.",
+    "hindi": "",
     "category": "AI Tools",
     "status": "ready",
     "file": "resources/TEAM.md"
@@ -65,8 +65,8 @@
   {
     "word": "SYSTEM",
     "title": "One-Person Company Checklist: 5 Principles",
-    "description": "5 principles wali one-person company checklist, SOLO reel ke SYSTEM word ke liye.",
-    "hindi": "एक व्यक्ति की कंपनी के 5 सिद्धांतों वाली चेकलिस्ट",
+    "description": "One-person company checklist based on 5 principles, for the SYSTEM word from the SOLO reel.",
+    "hindi": "",
     "category": "Business",
     "status": "ready",
     "file": "resources/SYSTEM.md"
@@ -74,8 +74,8 @@
   {
     "word": "NUMBER",
     "title": "Give Claude Its Own WhatsApp Number",
-    "description": "Claude ko apna WhatsApp number dene ka exact setup: virtual number, skills, 11 lines me message.",
-    "hindi": "क्लॉड को अपना व्हाट्सऐप नंबर देने का सेटअप",
+    "description": "Exact setup to give Claude its own WhatsApp number: virtual number, skills, and messages in 11 lines.",
+    "hindi": "",
     "category": "AI Tools",
     "status": "ready",
     "file": "resources/NUMBER.md"
@@ -83,8 +83,8 @@
   {
     "word": "ENGINE",
     "title": "Content Machine Setup Checklist",
-    "description": "Ek AI workspace jo content plan, likh aur publish kare, roz sirf 30 minute me.",
-    "hindi": "कंटेंट मशीन बनाने की चेकलिस्ट जो रोज़ कंटेंट प्लान, लिख और पब्लिश करे",
+    "description": "An AI workspace that plans, writes, and publishes content in just 30 minutes a day.",
+    "hindi": "",
     "category": "Content",
     "status": "ready",
     "file": "resources/ENGINE.md"

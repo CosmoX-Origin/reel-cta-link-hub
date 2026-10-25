@@ -28,44 +28,44 @@ def claude_guide():
 
 SPECS = [
     ("MOTION", "Claude Motion Graphics: 10-Step Setup",
-     "Claude se broadcast-style motion graphics banane ka poora setup, plus ek working 9:16 starter template (resources/motion-template.html).",
-     "क्लॉड से मोशन ग्राफिक्स बनाने का पूरा सेटअप और स्टार्टर टेम्पलेट",
+     "Complete setup for creating broadcast-style motion graphics with Claude, plus a working 9:16 starter template (resources/motion-template.html).",
+     "",
      "AI Tools", MOTION_SRC, "MOTION.md"),
     ("COACH", "Your Own AI Coach",
-     "Claude Projects me apna personal AI coach banane ka 5-step setup.",
-     "क्लॉड में अपना पर्सनल AI कोच बनाने का सेटअप",
+     "5-step setup to build your own personal AI coach in Claude Projects.",
+     "",
      "AI Tools", DM / "coach-guide-dm.txt", "COACH.md"),
     ("AUDIT", "The Business Audit Prompt",
-     "Business ko 6 areas me audit karne wala ruthless prompt, money leaks ke saath aur 30-day fix plan.",
-     "अपने बिज़नेस का ऑडिट करने वाला प्रॉम्प्ट और 30 दिन का फिक्स प्लान",
+     "A ruthless prompt that audits a business across 6 areas, finds money leaks, and gives a 30-day fix plan.",
+     "",
      "Business", DM / "audit-prompt-dm.txt", "AUDIT.md"),
     ("CLAUDE", "Claude Starter Guide: 60-Minute AI Employee",
-     "Claude ko sirf 60 minute me apna AI employee banane ka starter guide.",
-     "60 मिनट में क्लॉड को अपना AI कर्मचारी बनाने की गाइड",
+     "Starter guide to turn Claude into your AI employee in just 60 minutes.",
+     "",
      "AI Tools", None, "CLAUDE.md"),
     ("LEADS", "AI Closer Setup Checklist",
-     "Leads ko inbox me marne se rokne ka checklist: 60-second reply, Day 1-3-7 follow-up, zero-slip CRM.",
-     "लीड्स को खोने से रोकने वाला AI क्लोजर चेकलिस्ट",
+     "Checklist to stop leads dying in the inbox: 60-second reply, Day 1-3-7 follow-up, zero-slip CRM.",
+     "",
      "Business", DM / "leads-closer-checklist-dm.txt", "LEADS.md"),
     ("SOLO", "Run a 1-Person Company with AI",
-     "Bina team ke AI employees ke saath 1-person company chalane ka poora guide.",
-     "बिना टीम के AI से एक व्यक्ति की कंपनी चलाने की गाइड",
+     "Complete guide to running a 1-person company with AI employees, without a team.",
+     "",
      "Business", DM / "solo-guide-dm.txt", "SOLO.md"),
     ("TEAM", "Your 35 AI Team Add-ons",
-     "Claude Code ke liye 35 add-ons, har ek ke install command ke saath.",
-     "क्लॉड कोड के लिए 35 AI टीम ऐड-ऑन और इंस्टॉल कमांड",
+     "35 add-ons for Claude Code, each with its install command.",
+     "",
      "AI Tools", DM / "team-35-links-dm.txt", "TEAM.md"),
     ("SYSTEM", "One-Person Company Checklist: 5 Principles",
-     "5 principles wali one-person company checklist, SOLO reel ke SYSTEM word ke liye.",
-     "एक व्यक्ति की कंपनी के 5 सिद्धांतों वाली चेकलिस्ट",
+     "One-person company checklist based on 5 principles, for the SYSTEM word from the SOLO reel.",
+     "",
      "Business", HOME / "workspace/content-watch/solo-playbook-dm.txt", "SYSTEM.md"),
     ("NUMBER", "Give Claude Its Own WhatsApp Number",
-     "Claude ko apna WhatsApp number dene ka exact setup: virtual number, skills, 11 lines me message.",
-     "क्लॉड को अपना व्हाट्सऐप नंबर देने का सेटअप",
+     "Exact setup to give Claude its own WhatsApp number: virtual number, skills, and messages in 11 lines.",
+     "",
      "AI Tools", HOME / "workspace/content-watch/wa-number-dm.txt", "NUMBER.md"),
     ("ENGINE", "Content Machine Setup Checklist",
-     "Ek AI workspace jo content plan, likh aur publish kare, roz sirf 30 minute me.",
-     "कंटेंट मशीन बनाने की चेकलिस्ट जो रोज़ कंटेंट प्लान, लिख और पब्लिश करे",
+     "An AI workspace that plans, writes, and publishes content in just 30 minutes a day.",
+     "",
      "Content", RES / "ENGINE.md", "ENGINE.md"),
 ]
 
@@ -155,7 +155,7 @@ a {{ color: #ff7a1a; }}
 <span class="pill">COSMOX ORIGIN <span>&bull;</span> REEL RESOURCES</span>
 <button class="btn-line" style="float:right" onclick="toggleDark()" id="darkBtn">Dark mode</button>
 <h1>Reel CTA Link Hub</h1>
-<p class="lead">Reel par jo word comment karne ko kaha gaya tha, wahi word yahan search karo. Resource turant milega, DM ka wait nahi. Ek hi link, har reel ke liye.</p>
+<p class="lead">Search the exact word from the reel here. You will get the resource instantly, no DM wait. One link for every reel.</p>
 </header>
 <main>
 <input id="search" type="search" placeholder="Search the comment word, e.g. MOTION, COACH, LEADS" autocomplete="off">
@@ -168,13 +168,13 @@ a {{ color: #ff7a1a; }}
 <p class="hint" id="count"></p>
 <div id="cards"></div>
 <section class="how">
-<h2>Creator ke liye: naya CTA 2 minute me add karo</h2>
+<h2>For creators: add a new CTA in 2 minutes</h2>
 <ol>
-<li>Resource ki file <code>resources/</code> me daalo, jaise <code>resources/NEWWORD.md</code>.</li>
-<li><code>resources.json</code> me ek entry add karo: word, title, description, status aur file.</li>
-<li>Is page ko dobara build karo ya entry ko seedha index me daalo. Bio me sirf is hub ka link rakho, har reel ke liye alag link nahi.</li>
+<li>Drop the resource file in <code>resources/</code>, for example <code>resources/NEWWORD.md</code>.</li>
+<li>Add one entry to <code>resources.json</code>: word, title, description, status and file.</li>
+<li>Rebuild this page or add the entry directly to the index. Keep only this hub's link in the bio, not a separate link for every reel.</li>
 </ol>
-<p>Rule: koi resource ready nahi hai to uska status <code>coming-soon</code> rakho. Jhootha link kabhi mat do.</p>
+<p>Rule: if a resource is not ready, keep its status as <code>coming-soon</code>. Never give a fake link.</p>
 </section>
 </main>
 <footer>Built by Cosmox Origin &middot; Follow @cosmox_origin for AI workflows that actually work.<br>Follow Cosmox Origin: <a href="https://www.instagram.com/cosmox_origin">Instagram</a> &middot; <a href="https://www.facebook.com/profile.php?id=324872101219371">Facebook</a> &middot; <a href="https://cosmoxorigin.com">Website</a> &middot; <a href="https://github.com/CosmoX-Origin">GitHub</a><br><a href="INSTALL.md">Installation and usage guide</a> &middot; <a href="README.md">All resources</a></footer>
@@ -198,7 +198,7 @@ function render(filter) {{
     if (r.status !== "ready") {{
       return `<article class="card"><span class="badge soon">COMING SOON</span><span class="word">${{esc(r.word)}}</span><span class="cat">${{esc(r.category || "")}}</span><h2>${{esc(r.title)}}</h2><p>${{esc(r.description)}}</p></article>`;
     }}
-    return `<article class="card"><span class="badge ready">READY</span><span class="word">${{esc(r.word)}}</span><span class="cat">${{esc(r.category || "")}}</span><h2>${{esc(r.title)}}</h2><p>${{esc(r.description)}}</p><p class="hindi">Hindi me: ${{esc(r.hindi || "")}}</p><p class="hindi">Keywords: ${{esc((r.keywords || []).join(", "))}}</p><button class="btn-dark" onclick="toggle(${{idx}})">View resource</button><button class="btn-line" onclick="copyRes(${{idx}}, this)">Copy text</button><button class="btn-line" onclick="shareRes(${{idx}}, this)">Share</button><button class="btn-line" onclick="toggleEx(${{idx}})">Examples (${{(r.examples || []).length}})</button> <a href="${{esc(r.file)}}">Open file</a><div class="sections" id="sec-${{idx}}">${{sectionsHtml(r.body)}}</div><div class="sections" id="ex-${{idx}}">${{examplesHtml(r.examples)}}</div></article>`;
+    return `<article class="card"><span class="badge ready">READY</span><span class="word">${{esc(r.word)}}</span><span class="cat">${{esc(r.category || "")}}</span><h2>${{esc(r.title)}}</h2><p>${{esc(r.description)}}</p><p class="hindi">Keywords: ${{esc((r.keywords || []).join(", "))}}</p><button class="btn-dark" onclick="toggle(${{idx}})">View resource</button><button class="btn-line" onclick="copyRes(${{idx}}, this)">Copy text</button><button class="btn-line" onclick="shareRes(${{idx}}, this)">Share</button><button class="btn-line" onclick="toggleEx(${{idx}})">Examples (${{(r.examples || []).length}})</button> <a href="${{esc(r.file)}}">Open file</a><div class="sections" id="sec-${{idx}}">${{sectionsHtml(r.body)}}</div><div class="sections" id="ex-${{idx}}">${{examplesHtml(r.examples)}}</div></article>`;
   }}).join("") || "<p>No match. Try MOTION, COACH, AUDIT, CLAUDE, LEADS, SOLO, TEAM, SYSTEM, NUMBER or ENGINE.</p>";
 }}
 function toggle(i) {{ document.getElementById("sec-" + i).classList.toggle("open"); }}
